@@ -11,6 +11,7 @@ print("The list of words used in your sentence are: ", words)
 new_words = []
 frequencies = []
 for w in words:
+    word = word.strip(".,!?;:")
     if w not in new_words:
         new_words.append(w)
         frequencies.append(words.count(w))
@@ -24,6 +25,8 @@ for w in words:
     else:
         new_words.append(w)
         frequencies.append(1)
+for i in range(len(new_words)):
+    print(new_words[i], ":" frequencies[i])
 
 import re
 
