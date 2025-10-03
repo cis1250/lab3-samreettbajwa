@@ -12,16 +12,16 @@ print("The list of words used in your sentence are: ", words)
 new_words = []
 frequencies = []
 punctuation = (".,!?;:")
-new_sentence =""
+new_sentence = ""
 for char in sentence:
  if char not in punctuation:
   new_sentence += char      
 # 4. Iterate through words and update frequencies
 for w in words:
    if w not in new_words:
-        new_words.append(w)
-        frequencies.append(words.count(w))
-    else:
+       index = new_words.index(w)
+       frequencies[index] += 1
+   else:
         new_words.append(w)
         frequencies.append(1)
         
