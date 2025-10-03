@@ -11,6 +11,10 @@ print("The list of words used in your sentence are: ", words)
 # 3. Create lists to store words and their corresponding frequencies.
 new_words = []
 frequencies = []
+ words = words.discard(".,!?;:")
+    if w not in new_words:
+        new_words.append(w)
+        frequencies.append(words.count(w))
 print("Words: ", new_words)
 print("Frequencies: ", frequencies)       
 # 4. Iterate through words and update frequencies
@@ -19,13 +23,11 @@ for w in words:
         index = new_words.index(w)
         frequencies[index] += 1
         for w in words:
-    words = words.discard(".,!?;:")
-    if w not in new_words:
-        new_words.append(w)
-        frequencies.append(words.count(w))
     else:
         new_words.append(w)
         frequencies.append(1)
+        
+    print("\nWord Frequencies:")
 for i in range(len(new_words)):
     print(new_words[i], ":", frequencies[i])
 
