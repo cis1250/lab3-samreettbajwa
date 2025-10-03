@@ -3,7 +3,7 @@
 # Word frequency exercise
 # TODO: (Read detailed instructions in the Readme file)
 # 1. Prompt the user: Ask the user to enter a sentence.
-sentence = input("Enter a sentence")
+sentence = input("Enter a sentence: ")
 # 2. Split the sentence
 words = sentence.split()
 print("The list of words used in your sentence are: ", words)
