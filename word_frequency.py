@@ -26,7 +26,7 @@ for w in words:
         new_words.append(w)
         frequencies.append(1)
 for i in range(len(new_words)):
-    print(new_words[i], ":" frequencies[i])
+    print(new_words[i], ":", frequencies[i])
 
 import re
 
